@@ -6,6 +6,7 @@ namespace App\Controller;
 use App\Forms\UsuarioType;
 use App\Entity\Usuario;
 use phpDocumentor\Reflection\DocBlock\Tags\Throws;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,6 +18,7 @@ use Symfony\Component\HttpFoundation\Request;
 class UsuarioController extends AbstractController
 {
     /**
+     * @IsGranted("ROLE_ADMIN")
      * @Route("/usuario", name="usuario_novo")
      */
     public function cadastroUsuario(Request $request)
