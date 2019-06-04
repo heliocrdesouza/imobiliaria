@@ -87,12 +87,20 @@ class EnderecoType extends AbstractType
             ])
             ->add('telefone', TelType::class, [
                 'label' => 'Telefone:',
+                'attr' => [
+                    'data-mask' => '000-0000',
+                    'placeholder' => '_ _ _ - _ _ _ _'
+                ]
             ])
             ->add('dddCelular', TextType::class, [
                 'label' => 'DDD Celular:',
             ])
             ->add('celular', TextType::class, [
                 'label' => 'Celular:',
+                'attr' => [
+                    'data-mask' => '00000-0000',
+                    'placeholder' => '_ _ _ _ _  - _ _ _ _'
+                ]
             ])
         ;
     }
