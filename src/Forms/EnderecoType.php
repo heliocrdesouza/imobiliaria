@@ -39,6 +39,10 @@ class EnderecoType extends AbstractType
             ])
             ->add('cep', TextType::class, [
                 'label' => 'CEP:',
+                'attr' => [
+                    'data-mask' => '00000-000',
+                    'placeholder' => '_ _ _ _ _ . _ _ _'
+                ]
             ])
             ->add('complemento', TextType::class, [
                 'label' => 'Complemento',

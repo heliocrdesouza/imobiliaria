@@ -30,9 +30,11 @@ class UsuarioType extends AbstractType
                 'label' => 'Nome',
             ])
             ->add('cpfCnpj', TextType::class, [
-                'label' => 'CpfCnpj',
+                'label' => 'Cpf',
                 'attr' => [
                     'style' => 'width: 200px',
+                    'data-mask' => '000.000.000-00',
+                    'placeholder' => '_ _ _ . _ _ _ . _ _ _ - _ _'
                 ]
             ])
             ->add('sexo', TextType::class, [
